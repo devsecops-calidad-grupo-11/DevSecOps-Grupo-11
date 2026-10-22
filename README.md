@@ -1,4 +1,4 @@
-# DevSecOps y Calidad – Equipo 8
+# DevSecOps y Calidad – Equipo 11
 
 [![Playwright Tests CI](https://github.com/devsecops-calidad-grupo-8/DevSecOps-Grupo-8/actions/workflows/ci.yml/badge.svg)](https://github.com/devsecops-calidad-grupo-8/DevSecOps-Grupo-8/actions/workflows/ci.yml)
 
