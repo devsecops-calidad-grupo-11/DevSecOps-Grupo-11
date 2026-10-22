@@ -54,8 +54,12 @@ jobs:
         run: npm ci
 
       # 5. Ejecutar las pruebas de la Actividad 5.
+      # HOME=/root: Firefox no arranca dentro del contenedor si $HOME
+      # pertenece a otro usuario (workaround indicado por Playwright).
       - name: Ejecutar pruebas automatizadas
         run: npm test
+        env:
+          HOME: /root
 
       # 6. Publicar el reporte HTML como artifact.
       # También se intenta publicar si fallan los tests.
