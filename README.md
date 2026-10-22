@@ -21,7 +21,7 @@ descritas a continuación.
 
 ## 2. Qué se agregó en la Actividad 8
 
-- [ ] **SonarCloud**: análisis estático (SAST) integrado al workflow de GitHub Actions.
+- [ X ] **SonarCloud**: análisis estático (SAST) integrado al workflow de GitHub Actions.
 - [ ] **Quality Gate**: el pipeline falla si hay Bugs o Vulnerabilidades nuevos, o si la cobertura de tests es menor al 80%.
 - [ ] **Tests unitarios con reporte de cobertura**, que complementan los tests E2E de Playwright.
 - [ ] **Dependabot**: alertas y Pull Requests automáticos ante dependencias vulnerables.
