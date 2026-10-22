@@ -1,6 +1,6 @@
 # DevSecOps y Calidad – Equipo 8
 
-[![Playwright Tests CI](https://github.com/devsecops-calidad-grupo-8/DevSecOps-Grupo-8/actions/workflows/ci.yml/badge.svg)](https://github.com/devsecops-calidad-grupo-8/DevSecOps-Grupo-8/actions/workflows/ci.yml)
+[![Playwright Tests CI](https://github.com/devsecops-calidad-grupo-11/DevSecOps-Grupo-11/actions/workflows/ci.yml/badge.svg)](https://github.com/devsecops-calidad-grupo-11/DevSecOps-Grupo-11/actions/workflows/ci.yml)
 
 Trabajo práctico de la **Actividad 8** de Gestión de Desarrollo de Software
 (UTN FRA): calidad de código, deuda técnica y seguridad (DevSecOps) integradas
