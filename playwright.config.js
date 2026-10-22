@@ -61,7 +61,7 @@ module.exports = defineConfig({
   webServer: {
 
     command:
-      "python -m http.server 3000 --directory app",
+      "npx http-server app -p 3000 -a 127.0.0.1 -s",
 
     url:
       "http://127.0.0.1:3000",
@@ -69,5 +69,4 @@ module.exports = defineConfig({
     reuseExistingServer: true
 
   }
-
 });
