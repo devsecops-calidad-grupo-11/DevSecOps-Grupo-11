@@ -1,4 +1,3 @@
-
 # Actividad 6 - GitHub Actions.
 # Integración continua de la SPA con Playwright.
 
@@ -21,7 +20,13 @@ jobs:
     name: Run Playwright Tests
 
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 20
+
+    # Imagen oficial de Playwright: ya incluye Chromium, Firefox y las
+    # dependencias del sistema, por lo que no hace falta instalarlas con apt.
+    # La versión debe coincidir con @playwright/test del package-lock.json.
+    container:
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
 
     steps:
 
@@ -48,15 +53,15 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      # 5. Instalar Chromium, Firefox y dependencias de Linux.
-      - name: Instalar navegadores de Playwright
-        run: npx playwright install --with-deps
-
-      # 6. Ejecutar las pruebas de la Actividad 5.
+      # 5. Ejecutar las pruebas de la Actividad 5.
+      # HOME=/root: Firefox no arranca dentro del contenedor si $HOME
+      # pertenece a otro usuario (workaround indicado por Playwright).
       - name: Ejecutar pruebas automatizadas
         run: npm test
+        env:
+          HOME: /root
 
-      # 7. Publicar el reporte HTML como artifact.
+      # 6. Publicar el reporte HTML como artifact.
       # También se intenta publicar si fallan los tests.
       - name: Publicar reporte HTML
         if: ${{ !cancelled() }}
