@@ -1,0 +1,20 @@
+
+version: 2
+updates:
+  # Dependencias de npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    ignore:
+      # Evita que Playwright se actualice por separado
+      # mientras la imagen del CI siga usando otra version.
+      - dependency-name: "@playwright/test"
+
+  # Versiones de las GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 2
