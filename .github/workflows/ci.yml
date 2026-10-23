@@ -32,7 +32,7 @@ jobs:
 
       # 1. Descargar el código del repositorio.
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # 2. Configurar Node.js.
       - name: Setup Node.js
