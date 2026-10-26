@@ -1,0 +1,16 @@
+const { obtenerPrioridad } = require("../app/prioridad-demo");
+
+describe("obtenerPrioridad", () => {
+  const casosCubiertos = [
+    1, 2, 3, 4, 5, 6,
+    7, 8, 9, 10, 11, 12,
+    13, 14, 15, 16, 17, 18
+  ];
+
+  test.each(casosCubiertos)(
+    "devuelve la prioridad correspondiente para el código %i",
+    codigo => {
+      expect(obtenerPrioridad(codigo)).toBe(`Prioridad ${codigo}`);
+    }
+  );
+});
